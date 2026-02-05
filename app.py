@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def login():
     return render_template("login.html")
-if__name__ =="__main__":
+if __name__ =="__main__":
 app.run()
 app.secret_key = "secret123"
 
@@ -134,6 +134,6 @@ def logout():
     session.clear()
     return redirect("/")
 
-if __name__ == "__main__":
+if  __name__ == "__main__":
     init_db()
     app.run(host="0.0.0.0",port=10000)
