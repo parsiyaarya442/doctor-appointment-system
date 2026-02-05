@@ -4,9 +4,27 @@ import sqlite3
 app = Flask(__name__)
 app.secret_key = "secret123"
 
-@app.route("/")
+
+@app.route("/login")
 def home():
     return render_template("login.html")
+    
+@app.route("/admin")
+def admin():
+    return render_template("admin.html")
+
+@app.route("/doctor")
+def admin():
+    return render_template("doctor.html")
+
+@app.route("/patient")
+def admin():
+    return render_template("patient.html")
+
+@app.route("/register")
+def admin():
+    return render_template("register.html")
+        
 def get_db():
     return sqlite3.connect("database.db")
 
