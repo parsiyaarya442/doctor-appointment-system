@@ -3,8 +3,9 @@ import sqlite3
 
 app = Flask(__name__)
 app.secret_key = "secret123"
+
 @app.route("/")
-def login():
+def home():
     return render_template("login.html")
 def get_db():
     return sqlite3.connect("database.db")
