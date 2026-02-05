@@ -1,0 +1,14 @@
+<h2>Patient Panel</h2>
+<form method="post">
+<input name="doctor" placeholder="Doctor Name">
+<input name="date" placeholder="Date">
+<button>Book</button>
+</form>
+
+<ul>
+{% for i in data %}
+<li>{{i[2]}} | {{i[3]}} | {{i[4]}}</li>
+{% endfor %}
+</ul>
+
+<a href="/logout">Logout</a>
