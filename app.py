@@ -5,24 +5,24 @@ app = Flask(__name__)
 app.secret_key = "secret123"
 
 
-@app.route("/login")
+@app.route("/home")
 def home():
-    return render_template("login.html")
+    return render_template("home.html")
     
 @app.route("/admin")
 def admin():
     return render_template("admin.html")
 
 @app.route("/doctor")
-def admin():
+def doctor():
     return render_template("doctor.html")
 
 @app.route("/patient")
-def admin():
+def patient():
     return render_template("patient.html")
 
 @app.route("/register")
-def admin():
+def register():
     return render_template("register.html")
         
 def get_db():
