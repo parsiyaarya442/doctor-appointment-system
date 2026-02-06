@@ -101,8 +101,8 @@ def register_user():
 
     return render_template("register.html")
 
-@app.route("/patient", methods=["GET", "POST"])
-def patient_dashboard():
+@patient_bp.route("/patient", methods=["GET", "POST"])
+def patient():
     if request.method == "POST":
         doctor = request.form["doctor"]
         date = request.form["date"]
